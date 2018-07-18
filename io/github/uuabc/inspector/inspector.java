@@ -1,9 +1,9 @@
-package io.github.hsyyid.inspector;
+package io.github.uuabc.inspector;
 
 //import me.flibio.updatifier.*;
 import ninja.leaping.configurate.commented.*;
 import ninja.leaping.configurate.loader.*;
-import io.github.hsyyid.inspector.utilities.*;
+import io.github.uuabc.inspector.utilities.*;
 import org.spongepowered.api.plugin.*;
 import com.google.inject.*;
 import org.spongepowered.api.config.*;
@@ -12,7 +12,7 @@ import java.io.*;
 import org.spongepowered.api.text.*;
 import org.spongepowered.api.command.spec.*;
 import org.spongepowered.api.command.args.*;
-import io.github.hsyyid.inspector.cmdexecutors.*;
+import io.github.uuabc.inspector.cmdexecutors.*;
 
 import org.slf4j.Logger;
 import org.spongepowered.api.*;
