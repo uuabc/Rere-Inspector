@@ -1,4 +1,4 @@
-package io.github.hsyyid.inspector;
+package io.github.uuabc.inspector;
 
 public abstract class PluginInfo
 {
