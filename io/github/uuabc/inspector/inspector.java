@@ -38,7 +38,7 @@ import ninja.leaping.configurate.*;
 import java.util.stream.*;
 import java.util.*;
 
-@Plugin(id = "inspector", name = "Inspector", version = "0.7.1-rere", description = "This plugin enables servers to monitor griefing and provides rollback.", dependencies = {})
+@Plugin(id = "inspector", name = "Inspector", version = "0.7.2-rere", description = "This plugin enables servers to monitor griefing and provides rollback.", dependencies = {})
 public class Inspector {
 	private DatabaseManager databaseManager;
 	private static Inspector instance;
@@ -98,7 +98,7 @@ public class Inspector {
 	}
 
 	public void loadmessage() {
-		Inspector.message=new Message(ConfigDir,Inspector.config.getNode(new Object[] {"lang"}).getString()+".lang");
+		Inspector.message=new Message(ConfigDir,"message.conf");
 	}
 	
 	public static Message getMessage() {
