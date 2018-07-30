@@ -675,25 +675,14 @@ public class DatabaseManager {
 			}
 			conInsertclose(); // 查找数据前 先对插入数据进行提交 不然会出现 sqlite_busy
 			rs = stmt.executeQuery();
-			Timestamp blocktime;
 			while (rs.next()) {
 				final BlockSnapshot oldBlockSnapshot = this.deserializeBlockSnapshot(
 						dbstrTOJ(worlduuid, rs.getInt("x"), rs.getInt("y"), rs.getInt("z"), rs.getInt("oldBlock")));
-				final BlockSnapshot newBlockSnapshot = this.deserializeBlockSnapshot(
-						dbstrTOJ(worlduuid, rs.getInt("x"), rs.getInt("y"), rs.getInt("z"), rs.getInt("newBlock")));
-
-				if (oldBlockSnapshot == null || newBlockSnapshot == null) {
+				if (oldBlockSnapshot == null) { 
 					continue;
 				}
-
-				if (DatabaseManager.mysqle) {
-					blocktime = rs.getTimestamp("time");
-				} else {
-					blocktime = Timestamp.valueOf(rs.getString("time"));
-				}
 				blockInformation
-						.add(new BlockInformation(newBlockSnapshot.getLocation().get(), oldBlockSnapshot.getState(),
-								newBlockSnapshot.getState(), blocktime, playerUniqueId, this.getPlayerName(playerId)));
+						.add(new BlockInformation(oldBlockSnapshot.getLocation().get(), oldBlockSnapshot.getState()));
 			}
 			rs.close();
 			stmt.close();
