@@ -5,7 +5,7 @@ Re-Inspector was customized by Tollainmear https://github.com/Tollainmear/Re-Ins
 
 Rere-Inspector was customized by uuabc https://github.com/uuabc/Rere-Inspector
 
-#dependencies
+# dependencies
 
 [java-8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
