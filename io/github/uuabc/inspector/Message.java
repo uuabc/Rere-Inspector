@@ -32,14 +32,14 @@ public class Message {
 						.setValue((Object) "&9[Inspector]: &7reload: &6reload Inspector");
 
 				mess.getNode(new Object[] { "inspector.purge.success" })
-						.setValue((Object) "&2Inspector data was clean up");
+						.setValue((Object) "&2[Inspector]: data was clean up");
 				mess.getNode(new Object[] { "inspector.purge.console" }).setValue(
 						(Object) "Run the purge command from Console, attempt to clean the data before {0} ago");
 				mess.getNode(new Object[] { "inspector.purge.player" })
 						.setValue((Object) "{0}attempt to run the purge command to clean the data before{1} ago");
 
 				mess.getNode(new Object[] { "inspector.reload.success" })
-						.setValue((Object) "Inspecter config reloaded");
+						.setValue((Object) "&9[Inspector]: reload success");
 
 				mess.getNode(new Object[] { "inspector.rollback.not.player" }).setValue(
 						(Object) "&9[Inspector]: &4Error! You may only use this command as an in-game player.");
@@ -59,7 +59,7 @@ public class Message {
 				.setValue((Object) "&9[Inspector]: &4Error! You may do a rollback for a region in two different worlds.And your not set a radius");
 				
 				mess.getNode(new Object[] { "inspector.rollback.text.box.wait" })
-				.setValue((Object)"[Inspector]: wait...");
+				.setValue((Object)"&9[Inspector]: wait...");
 				mess.getNode(new Object[] { "inspector.rollback.text.box0" })
 						.setValue((Object) "&9[Inspector] &6Rollback completed");
 				mess.getNode(new Object[] { "inspector.rollback.text.box1" })
@@ -73,7 +73,7 @@ public class Message {
 				mess.getNode(new Object[] { "inspector.rollback.text.box4" })
 				.setValue((Object) "&7PointB: &6x:{0} y:{1} z:{2}\n");
 				mess.getNode(new Object[] { "inspector.rollback.text.box5" })
-				.setValue((Object)"Total Blocks: {0}");
+				.setValue((Object)"&7Total Blocks: &6{0}");
 				mess.getNode(new Object[] { "inspector.rollback.text.boxpadding" })
 				.setValue((Object)"-");
 				
