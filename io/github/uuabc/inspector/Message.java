@@ -20,6 +20,7 @@ public class Message {
 			try {
 				file.createNewFile();
 				HoconConfigurationLoader messM = HoconConfigurationLoader.builder().setFile(file).build();
+				mess = messM.load();
 				mess.getNode(new Object[] { "inspector.use" }).setValue((Object) "&9[Inspector]: &7Version: {0}");
 				mess.getNode(new Object[] { "inspector.toggle.help" })
 						.setValue((Object) "&9[Inspector]: &7toggle: &6Toggle Inspector Command");
