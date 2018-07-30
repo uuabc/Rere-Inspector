@@ -4,7 +4,6 @@ import org.spongepowered.api.world.*;
 import org.spongepowered.api.block.*;
 
 import java.sql.Timestamp;
-import java.util.*;
 
 public class BlockInformation
 {
@@ -12,15 +11,15 @@ public class BlockInformation
     private BlockState oldBlockSnapshot;
     private BlockState newBlockSnapshot;
     private Timestamp timeEdited;
-    private UUID playerUUID;
+    private String playerUUID;
     private String playerName;
     
-    public BlockInformation(final Location<World> location, final BlockState oldBlockSnapshot, final BlockState newBlockSnapshot, final Timestamp timeEdited, final UUID playerUUID, final String playerName) {
+    public BlockInformation(final Location<World> location, final BlockState oldBlockSnapshot, final BlockState newBlockSnapshot, final Timestamp timeEdited, final String playerUniqueId, final String playerName) {
         this.location = location;
         this.oldBlockSnapshot = oldBlockSnapshot;
         this.newBlockSnapshot = newBlockSnapshot;
         this.timeEdited = timeEdited;
-        this.playerUUID = playerUUID;
+        this.playerUUID = playerUniqueId;
         this.playerName = playerName;
     }
     
@@ -40,7 +39,7 @@ public class BlockInformation
         return this.timeEdited;
     }
     
-    public UUID getPlayerUUID() {
+    public String getPlayerUUID() {
         return this.playerUUID;
     }
     
